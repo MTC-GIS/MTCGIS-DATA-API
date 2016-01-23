@@ -4,7 +4,7 @@ var _ = require('lodash');
 var sql = require('mssql');
 var config = require('./../../config/environment');
 
-// Get list of t6s
+// Get list of counties
 exports.county = function(req, res) {
     var request = new sql.Request(config.mssql.connection);
     var query = 'SELECT distinct [County] FROM [VitalSigns_API].[VS2].[T4_CommuteTimeEmp_County]';
@@ -23,6 +23,7 @@ exports.county = function(req, res) {
     });
 };
 
+// Get list of cities
 exports.city = function(req, res) {
     var request = new sql.Request(config.mssql.connection);
     var query = 'SELECT City FROM VitalSigns_API.VS2.T1_CommuteModeShareRes_City WHERE (City IS NOT NULL)';
