@@ -10,5 +10,7 @@ router.get('/countysimple', controller.countysimple);
 router.get('/metro', controller.metro);
 router.get('/regiondetail', controller.regiondetail);
 router.get('/regionsimple', controller.regionsimple);
+router.get('/city', controller.city);
+router.get('/tract', controller.tract);
 
 module.exports = router;

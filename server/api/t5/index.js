@@ -5,6 +5,6 @@ var controller = require('./t5.controller');
 
 var router = express.Router();
 
-router.get('/county', controller.county);
+router.get('/flows', controller.county);
 
 module.exports = router;
